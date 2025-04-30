@@ -1,0 +1,72 @@
+.profile-container {
+    max-width: 935px;
+    margin: 60px auto 0;
+    padding: 30px 20px;
+}
+
+.profile-header {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 44px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.username {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.edit-profile-btn {
+    padding: 5px 9px;
+    background: transparent;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.edit-profile-btn:hover {
+    background: #fafafa;
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.no-posts {
+    text-align: center;
+    padding: 40px;
+    color: #8e8e8e;
+}
+
+.no-posts i {
+    font-size: 48px;
+    margin-bottom: 16px;
+}

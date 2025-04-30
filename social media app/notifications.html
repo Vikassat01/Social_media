@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - JH02-Collab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="notifications.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">JH02-Collab</div>
+        <div class="nav-items">
+            <a href="index.html" class="nav-link" data-action="home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="messages.html" class="nav-link" data-action="messages">
+                <i class="far fa-paper-plane"></i>
+                <span>Messages</span>
+            </a>
+            <a href="#" class="nav-link" data-action="explore">
+                <i class="far fa-compass"></i>
+                <span>Explore</span>
+            </a>
+            <a href="notifications.html" class="nav-link active" data-action="notifications">
+                <i class="far fa-heart"></i>
+                <span>Notifications</span>
+            </a>
+            <div class="profile-dropdown">
+                <!-- ...existing profile dropdown code... -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="notifications-container">
+        <div class="notifications-header">
+            <h2>Notifications</h2>
+        </div>
+        <div class="notifications-content">
+            <div class="notifications-section">
+                <h3>Today</h3>
+                <div class="notification-list">
+                    <!-- Notifications will be loaded here -->
+                </div>
+            </div>
+            <div class="notifications-section">
+                <h3>This Week</h3>
+                <div class="notification-list">
+                    <!-- More notifications -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

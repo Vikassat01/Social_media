@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JH02-Collab</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <div class="logo-large">
+                <h1 class="brand-text">JH02-Collab</h1>
+            </div>
+            <form id="loginForm" novalidate>
+                <div class="input-group" data-error="Please enter your username">
+                    <input type="text" id="username" placeholder="Phone number, username, or email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password (optional)">
+                    <button type="button" class="toggle-password">
+                        <i class="far fa-eye"></i>
+                    </button>
+                </div>
+                <button type="submit" class="login-btn">Log In</button>
+                <div class="divider">OR</div>
+                <a href="#" class="facebook-login">
+                    <i class="fab fa-facebook-square"></i>
+                    Log in with Facebook
+                </a>
+                <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+            </form>
+        </div>
+
+        <div class="signup-box">
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+
+        <div class="get-app">
+            <p>Get the app.</p>
+            <div class="app-buttons">
+                <a href="#"><img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png" alt="Download on the App Store"></a>
+                <a href="#"><img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" alt="Get it on Google Play"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js" type="module"></script>
+</body>
+</html>

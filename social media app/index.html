@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JH02-Collab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Check authentication immediately
+        (function() {
+            const userSession = localStorage.getItem('userSession');
+            if (!userSession) {
+                window.location.href = 'login.html';
+            }
+        })();
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">JH02-Collab</div>
+        <div class="nav-items">
+            <a href="index.html" class="nav-link" data-action="home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="messages.html" class="nav-link" data-action="messages">
+                <i class="far fa-paper-plane"></i>
+                <span>Messages</span>
+                <span class="message-count">2</span>
+            </a>
+            <a href="#" class="nav-link" data-action="explore">
+                <i class="far fa-compass"></i>
+                <span>Explore</span>
+            </a>
+            <a href="notifications.html" class="nav-link" data-action="notifications">
+                <i class="far fa-heart"></i>
+                <span>Notifications</span>
+            </a>
+            <div class="profile-dropdown">
+                <button class="profile-trigger" id="profileTrigger">
+                    <img src="https://picsum.photos/30/30" alt="Profile" onerror="this.src='https://via.placeholder.com/30'">
+                    <span class="profile-status"></span>
+                </button>
+                <div class="dropdown-menu" id="profileDropdown">
+                    <div class="dropdown-header">
+                        <img src="https://picsum.photos/40/40" alt="Profile" onerror="this.src='https://via.placeholder.com/40'">
+                        <div class="user-info">
+                            <span class="username">your_username</span>
+                            <span class="email">user@example.com</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a href="profile.html" class="dropdown-item">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                    <a href="settings.html" class="dropdown-item">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="stories-container">
+                <button class="stories-scroll-button left" aria-label="Scroll left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="stories">
+                    <div class="story">
+                        <div class="story-ring">
+                            <img src="https://picsum.photos/50/50?random=1" alt="story" onerror="this.src='https://via.placeholder.com/50'">
+                        </div>
+                        <span>Your Story</span>
+                    </div>
+                    <!-- More stories -->
+                    <div class="story">
+                        <div class="story-ring">
+                            <img src="https://picsum.photos/50/50?random=2" alt="story" onerror="this.src='https://via.placeholder.com/50'">
+                        </div>
+                        <span>user_1</span>
+                    </div>
+                </div>
+                <button class="stories-scroll-button right" aria-label="Scroll right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="feed">
+                <div class="post">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="https://picsum.photos/30/30?random=3" alt="User" onerror="this.src='https://via.placeholder.com/30'">
+                            <span class="username">john_doe</span>
+                        </div>
+                        <button class="more-options"><i class="fas fa-ellipsis-h"></i></button>
+                    </div>
+                    <img src="https://picsum.photos/600/600?random=4" alt="Post" class="post-image" onerror="this.src='https://via.placeholder.com/600'">
+                    <div class="post-actions">
+                        <div class="left-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                            <button class="comment-btn"><i class="far fa-comment"></i></button>
+                            <button class="share-btn"><i class="far fa-paper-plane"></i></button>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                    <div class="post-likes">
+                        <span class="likes-count">1,234 likes</span>
+                    </div>
+                    <div class="post-caption">
+                        <span class="username">john_doe</span>
+                        <span class="caption">Beautiful day! 📸 #photography</span>
+                    </div>
+                    <div class="post-comments">
+                        <div class="comment">
+                            <span class="username">user_2</span>
+                            <span class="comment-text">Amazing shot! 👏</span>
+                        </div>
+                    </div>
+                    <div class="add-comment">
+                        <input type="text" placeholder="Add a comment...">
+                        <button>Post</button>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="https://picsum.photos/30/30?random=5" alt="User" onerror="this.src='https://via.placeholder.com/30'">
+                            <span class="username">travel_lover</span>
+                        </div>
+                        <button class="more-options"><i class="fas fa-ellipsis-h"></i></button>
+                    </div>
+                    <img src="https://picsum.photos/600/600?random=6" alt="Post" class="post-image" onerror="this.src='https://via.placeholder.com/600'" loading="lazy">
+                    <div class="post-actions">
+                        <div class="left-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                            <button class="comment-btn"><i class="far fa-comment"></i></button>
+                            <button class="share-btn"><i class="far fa-paper-plane"></i></button>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                    <div class="post-likes">
+                        <span class="likes-count">856 likes</span>
+                    </div>
+                    <div class="post-caption">
+                        <span class="username">travel_lover</span>
+                        <span class="caption">Paradise found! 🌴 #travel #beach</span>
+                    </div>
+                    <div class="post-comments">
+                        <div class="comment">
+                            <span class="username">beach_life</span>
+                            <span class="comment-text">Perfect spot! 🌊</span>
+                        </div>
+                    </div>
+                    <div class="add-comment">
+                        <input type="text" placeholder="Add a comment...">
+                        <button>Post</button>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="https://picsum.photos/30/30?random=7" alt="User" onerror="this.src='https://via.placeholder.com/30'">
+                            <span class="username">foodie_adventures</span>
+                        </div>
+                        <button class="more-options"><i class="fas fa-ellipsis-h"></i></button>
+                    </div>
+                    <img src="https://picsum.photos/600/600?random=8" alt="Post" class="post-image" onerror="this.src='https://via.placeholder.com/600'" loading="lazy">
+                    <div class="post-actions">
+                        <div class="left-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                            <button class="comment-btn"><i class="far fa-comment"></i></button>
+                            <button class="share-btn"><i class="far fa-paper-plane"></i></button>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                    <div class="post-likes">
+                        <span class="likes-count">2,341 likes</span>
+                    </div>
+                    <div class="post-caption">
+                        <span class="username">foodie_adventures</span>
+                        <span class="caption">Homemade perfection 👨‍🍳 #foodie #cooking</span>
+                    </div>
+                    <div class="post-comments">
+                        <div class="comment">
+                            <span class="username">chef_life</span>
+                            <span class="comment-text">Looks delicious! Recipe please! 😋</span>
+                        </div>
+                    </div>
+                    <div class="add-comment">
+                        <input type="text" placeholder="Add a comment...">
+                        <button>Post</button>
+                    </div>
+                </div> <!-- Properly close post div -->
+            </div> <!-- Properly close feed div -->
+        </main>
+
+        <aside class="sidebar">
+            <div class="profile-summary">
+                <img src="https://picsum.photos/60/60?random=5" alt="Your Profile" onerror="this.src='https://via.placeholder.com/60'">
+                <div class="profile-info">
+                    <div class="profile-name">
+                        <span class="username">your_username</span>
+                        <span class="name">Your Full Name</span>
+                    </div>
+                    <button class="switch-btn">Switch</button>
+                </div>
+            </div>
+
+            <div class="suggestions">
+                <div class="suggestions-header">
+                    <span class="suggestions-title">Suggestions For You</span>
+                    <a href="#" class="see-all">See All</a>
+                </div>
+                <div class="suggestion-list">
+                    <div class="suggestion-item">
+                        <div class="sugg-user-info">
+                            <img src="https://picsum.photos/40/40?random=6" alt="Suggested User">
+                            <div class="sugg-user-details">
+                                <span class="username">photography_lover</span>
+                                <span class="follow-status">Followed by user_1</span>
+                            </div>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <div class="sugg-user-info">
+                            <img src="https://picsum.photos/40/40?random=7" alt="Suggested User">
+                            <div class="sugg-user-details">
+                                <span class="username">travel_enthusiast</span>
+                                <span class="follow-status">New to JH02-Collab</span>
+                            </div>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <div class="sugg-user-info">
+                            <img src="https://picsum.photos/40/40?random=8" alt="Suggested User">
+                            <div class="sugg-user-details">
+                                <span class="username">art_creator</span>
+                                <span class="follow-status">Followed by user_2</span>
+                            </div>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        // Check authentication before loading main page
+        (function() {
+            const userSession = JSON.parse(localStorage.getItem('userSession'));
+            if (!userSession || !userSession.isLoggedIn) {
+                window.location.replace('login.html');
+                return;
+            }
+            // Update username in UI
+            document.querySelector('.profile-name .username').textContent = userSession.username;
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
